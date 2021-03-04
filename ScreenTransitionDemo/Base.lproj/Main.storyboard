@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="ScreenTransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,11 +21,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="SecondViewControllerへ">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="goToSecondeVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftm-b6-0f9"/>
+                                    <segue destination="nqH-yV-y3C" kind="show" id="Hgv-72-UbR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-EO-y65">
@@ -33,7 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="SecondViewControllerへ">
+                                <state key="normal" title="TabBarへ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -46,7 +47,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="YuY-GQ-KM6"/>
                     <connections>
-                        <segue destination="nqH-yV-y3C" kind="show" identifier="FirstToSecond" id="F6X-hO-ooU"/>
                         <segue destination="h0S-8N-SuO" kind="show" identifier="FirstToA" id="W7v-HH-U9f"/>
                     </connections>
                 </viewController>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="653.62318840579712" y="137.94642857142856"/>
         </scene>
-        <!--Second View Controller-->
+        <!--View Controller-->
         <scene sceneID="KSx-16-9el">
             <objects>
-                <viewController id="nqH-yV-y3C" customClass="SecondViewController" customModule="ScreenTransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nqH-yV-y3C" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7wN-nL-abb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,11 +67,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="ThirdViewControllerへ">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="goToThirdVC:" destination="nqH-yV-y3C" eventType="touchUpInside" id="GzV-l8-yT4"/>
+                                    <segue destination="lxw-Zx-Ply" kind="presentation" id="D1R-UF-x47"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,50 +80,46 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZNz-i7-xvN"/>
-                    <connections>
-                        <segue destination="lxw-Zx-Ply" kind="presentation" identifier="SecondToThird" id="Yfj-mh-lHm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0Z-Xl-dN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1450.7246376811595" y="137.94642857142856"/>
         </scene>
-        <!--Third View Controller-->
+        <!--View Controller-->
         <scene sceneID="ASU-Bz-J1k">
             <objects>
-                <viewController id="lxw-Zx-Ply" customClass="ThirdViewController" customModule="ScreenTransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lxw-Zx-Ply" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIb-Bs-tTV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oda-wy-Dt7">
-                                <rect key="frame" x="69" y="75" width="277" height="59"/>
+                                <rect key="frame" x="69" y="135" width="277" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="FourthViewControllerへ">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="goToFourthVC:" destination="lxw-Zx-Ply" eventType="touchUpInside" id="wYf-R1-Lqu"/>
+                                    <segue destination="AgX-go-rSN" kind="show" id="r7v-BV-Nqp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wwK-vr-7fC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <segue destination="AgX-go-rSN" kind="show" identifier="ThirdToFourth" id="dmB-uc-qFs"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="PNT-LK-eyJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUD-EZ-lsF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2188" y="138"/>
         </scene>
-        <!--Fourth View Controller-->
+        <!--View Controller-->
         <scene sceneID="aTk-2F-RL1">
             <objects>
-                <viewController id="AgX-go-rSN" customClass="FourthViewController" customModule="ScreenTransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AgX-go-rSN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4zH-yU-wJK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +135,7 @@
         <!--Item-->
         <scene sceneID="gvm-D3-NXV">
             <objects>
-                <viewController id="sXP-7U-SCX" customClass="AViewController" customModule="ScreenTransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sXP-7U-SCX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wKr-hZ-U7E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,11 +145,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="BViewControllerへ">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="goToBVC:" destination="sXP-7U-SCX" eventType="touchUpInside" id="J6L-Ts-VAt"/>
+                                    <segue destination="TYb-7W-GFC" kind="show" id="KKy-AM-dv1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,21 +158,33 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="MNY-WV-bRe"/>
-                    <connections>
-                        <segue destination="TYb-7W-GFC" kind="show" identifier="AToB" id="yEd-Ef-hNP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsS-f6-jmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2247.826086956522" y="902.67857142857133"/>
+            <point key="canvasLocation" x="1451" y="903"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VBD-Ld-z0e">
             <objects>
-                <viewController id="TYb-7W-GFC" customClass="BViewController" customModule="ScreenTransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TYb-7W-GFC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="63M-Gi-Mtq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyP-vc-cg5">
+                                <rect key="frame" x="88" y="173" width="238" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToBVC:" destination="sXP-7U-SCX" eventType="touchUpInside" id="BAC-mO-jdc"/>
+                                    <segue destination="IVl-Q4-VOf" kind="presentation" id="pMi-RL-avv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ndy-Da-9Qp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -182,7 +192,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZk-XG-Znn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="903"/>
+            <point key="canvasLocation" x="2187" y="903"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JIJ-rv-LH8">
+            <objects>
+                <viewController id="IVl-Q4-VOf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MIY-XU-Niq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hef-UY-yNP">
+                                <rect key="frame" x="88" y="97" width="238" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToBVC:" destination="sXP-7U-SCX" eventType="touchUpInside" id="13Z-oG-5CL"/>
+                                    <segue destination="I2v-ak-Nnh" kind="show" id="WLJ-m8-8lr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q9H-dr-HEP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQW-ez-xc7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974" y="903"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LzX-dh-PAn">
+            <objects>
+                <viewController id="I2v-ak-Nnh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBt-ra-OpY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yEk-Qt-J8A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b1v-t1-1T3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5P-kX-cS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3804" y="903"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FzN-9f-q8H">
@@ -209,6 +265,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hEv-fR-z6f"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xij-5s-oAp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -218,7 +275,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXC-A1-BFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1451" y="903"/>
+            <point key="canvasLocation" x="654" y="903"/>
         </scene>
     </scenes>
     <resources>
@@ -239,6 +296,9 @@
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

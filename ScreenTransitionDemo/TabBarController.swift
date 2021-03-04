@@ -1,18 +1,18 @@
 //
-//  BViewController.swift
+//  TabBarController.swift
 //  ScreenTransitionDemo
 //
-//  Created by Masato Takamura on 2021/03/01.
+//  Created by Masato Takamura on 2021/03/05.
 //
 
 import UIKit
 
-class BViewController: UIViewController {
+class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        selectedIndex = 1
     }
     
 
